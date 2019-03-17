@@ -54,3 +54,15 @@ ssserver -c /etc/shadowsocks.json -d start
 停止服务：
 ssserver -c /etc/shadowsocks.json -d stop
 ```
+## 加速配置
+bbr 实际加速感觉一般，这里我用的别人写的脚本的 brook 端口转发加速
+### 1、
+```bash
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/brook-pf.sh && chmod +x brook-pf.sh && bash brook-pf.sh
+```
+运行如下指令运行脚本执行操作即可
+```bash
+bash brook-pf.sh
+```
+
+### 防火墙配置
